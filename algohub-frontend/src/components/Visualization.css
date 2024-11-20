@@ -1,0 +1,105 @@
+/* General Layout */
+.visualization-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .visualization-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .visualization-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Features Section */
+  .visualization-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .feature {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .explore-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Footer */
+  .visualization-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f4f7fa;
+    border-top: 2px solid #ddd;
+  }
+  
+  .visualization-footer p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .visualization-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .visualization-header h2 {
+      font-size: 2rem;
+    }
+  
+    .intro-text {
+      font-size: 1rem;
+    }
+  
+    .visualization-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .feature {
+      padding: 15px;
+    }
+  }
+  

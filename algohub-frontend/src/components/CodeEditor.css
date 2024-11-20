@@ -1,0 +1,118 @@
+/* General Layout */
+.code-editor-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .editor-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .editor-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .editor-header p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Editor Section */
+  .editor-content {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .editor-actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .action-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .run-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  .run-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .save-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+  }
+  
+  .save-btn:hover {
+    background-color: #1976D2;
+  }
+  
+  /* Footer */
+  .editor-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f4f7fa;
+    border-top: 2px solid #ddd;
+  }
+  
+  .editor-footer p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .editor-header h2 {
+      font-size: 2rem;
+    }
+  
+    .editor-header p {
+      font-size: 1rem;
+    }
+  
+    .editor-actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .action-btn {
+      margin: 10px;
+      padding: 10px 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .editor-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .editor-content {
+      margin: 10px 0;
+    }
+  
+    .action-btn {
+      width: 100%;
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  
