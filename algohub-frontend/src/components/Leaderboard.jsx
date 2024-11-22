@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import './Leaderboard.css';
 
 function Leaderboard() {
-  const users = [
-    { name: "Alice", score: 120 },
-    { name: "Bob", score: 100 },
-    { name: "Charlie", score: 80 },
-    { name: "Dave", score: 60 },
-    { name: "Eve", score: 40 },
-  ];
+  const [users, setUsers] = useState([]);
+
+  // Fetch data from backend
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/users") // Update with your backend API endpoint
+      .then(response => setUsers(response.data))
+      .catch(err => console.log("Error fetching leaderboard data:", err));
+  }, []);
 
   return (
     <div className="leaderboard-container">
@@ -26,13 +28,19 @@ function Leaderboard() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{user.name}</td>
-              <td>{user.score} points</td>
+          {users.length > 0 ? (
+            users.map((user, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{user.username}</td> {/* Adjust the key as per your backend response */}
+                <td>{user.score} points</td> {/* Adjust the key as per your backend response */}
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="3">Loading...</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
 
